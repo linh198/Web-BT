@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2">@example.com</span>
+</div>
+
+<div class="mb-3">
+  <label for="basic-url" class="form-label">Your vanity URL</label>
+  <div class="input-group">
+    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+  </div>
+  <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">.00</span>
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <span class="input-group-text">@</span>
+  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+</div>
+
+<div class="input-group">
+  <span class="input-group-text">With textarea</span>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>*@
+
+  <div class="d-flex flex-column">
+    <h1 class="text-center my-5 text-uppercase">CHƯƠNG TRÌNH TÍNH LÃI SUẤT TIẾT KIỆM</h1>
+    <div class="d-flex flex-column justify-content-between gap-3">
+        <div class="col-4 mx-auto">
+            <form action="/Laisuat/Giaodien" method="post">
+                <div class="mb-3">
+                    <label for="sotiengui" class="form-label">Số tiền gửi* (VNĐ)</label>
+                    <input type="number" class="form-control" id="sotiengui" name="sotiengui" value="@ViewData["sotiengui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="laisuatgui" class="form-label">Lãi suất gửi* (%/năm)</label>
+                    <input type="number" class="form-control" id="laisuatgui" name="laisuatgui" value="@ViewData["Laisuatgui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="kyhangui" class="form-label">Kỳ hạn gửi* (tháng)</label>
+                    <input type="number" class="form-control" id="Kyhangui" name="Kyhangui" value="@ViewData["Kyhangui"]" aria-describedby="text">
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <button type="submit" id="ketqua" class="btn btn-primary px-4 py-2">Xem kết quả</button>
+                </div>
+            </form>
+        </div>
+        <div class="mb-5 col-4 mx-auto">
+            <label for="Sotienlainhanduoc" class="form-label fw-bold">Số tiền lãi nhận được</label>
+            <input type="number" class="form-control" id="Sotienlainhanduoc" name="Sotienlainhanduoc" value="@ViewData["Sotienlainhanduoc"]" aria-describedby="text">
+        </div>
+
+         <div class="mb-5 col-4 mx-auto">
+            <label for="Tongsotiennhanduockhidenhan" class="form-label fw-bold">Tổng số tiền nhận được khi đến hạn</label>
+            <input type="number" class="form-control" id="Tongsotiennhanduockhidenhan" name="Tongsotiennhanduockhidenhan" value="@ViewData["Tongsotiennhanduockhidenhan"]" aria-describedby="text">
+        </div>
+     
+       
+    </div>
+</div>
